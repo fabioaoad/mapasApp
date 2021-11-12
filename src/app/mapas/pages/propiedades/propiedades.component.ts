@@ -17,9 +17,19 @@ interface Propiedad {
 export class PropiedadesComponent{
   propiedades: Propiedad[] = [
     {
-      titulo: 'Casa residencial, Canadá',
-      descripcion: 'Bella propiedad en Katana, Canadá',
-      lngLat: [ -75.92722289474008, 45.280015511264466]
+      titulo: 'Universidad Nacional de Santiago del Estero',
+      descripcion: 'Facultad de Ciencias Exactas y Tecnologías',
+      lngLat: [ -64.25162994261042, -27.801428908781492]
+    },
+    {
+      titulo: 'El Zanjon - Santiago. del Estero.',
+      descripcion: 'Complejo la Salamanca',
+      lngLat: [ -64.24822069926361, -27.8581790347864]
+    },
+    {
+      titulo: 'Plaza Belgrano - La Banda',
+      descripcion: 'Hermosa plaza, Santiago del Estero, Argentina',
+      lngLat: [ -64.2441904698407, -27.735946655047304]
     },
     {
       titulo: 'Casa de playa, México',
