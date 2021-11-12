@@ -83,6 +83,12 @@ export class MarcadoresComponent implements AfterViewInit {
     } );
    // console.log(this.marcadores);
     this.guardarMarcadoresLocalStorage();
+
+    nuevoMarcador.on('dragend', () => {
+      //console.log('drag');
+      this.guardarMarcadoresLocalStorage();
+    })
+
   }
 
   irMarcador( marker: mapboxgl.Marker ){
@@ -125,8 +131,22 @@ export class MarcadoresComponent implements AfterViewInit {
         marker: newMarker,
         color: m.color
       });
-      
+
+      newMarker.on('dragend', () => {
+        //console.log('drag');
+        this.guardarMarcadoresLocalStorage();
+      })
+
     });
+  }
+
+
+  borrarMarcador( i: number ){
+   // console.log('Borrando Marcador');
+    this.marcadores[i].marker?.remove();
+    this.marcadores.splice(i,1);
+    this.guardarMarcadoresLocalStorage();
+
   }
 
 }
